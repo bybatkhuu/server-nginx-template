@@ -3,7 +3,7 @@ services:
     image: bybatkhuu/nginx:latest
     build:
       context: .
-    restart: unless-stopped
+    restart: always
     environment:
       - TERM=${TERM:-xterm}
       - TZ=${TZ:-Asia/Seoul}
