@@ -1,9 +1,10 @@
 # syntax=docker/dockerfile:1
 
-ARG BASE_IMAGE=ubuntu:24.04
+# ARG BASE_IMAGE=ubuntu:24.04
+ARG BASE_IMAGE=ubuntu:26.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG NGINX_VERSION=1.28.0
+ARG NGINX_VERSION=1.30.1
 
 
 # Here is the builder image
@@ -24,8 +25,9 @@ RUN rm -rfv /var/lib/apt/lists/* /var/cache/apt/archives/* /tmp/* /root/.cache/*
 		build-essential \
 		wget \
 		tar \
-		libpcre3 \
-		libpcre3-dev \
+		# libpcre3 \
+		# libpcre3-dev \
+		libpcre2-dev \
 		zlib1g \
 		zlib1g-dev \
 		libssl-dev \
@@ -58,6 +60,7 @@ RUN wget -nv --show-progress --progress=bar:force:noscroll "https://nginx.org/do
 		--with-http_realip_module \
 		--with-http_auth_request_module \
 		--with-http_v2_module \
+		--with-http_v3_module \
 		--with-http_slice_module \
 		--with-threads \
 		--with-http_addition_module \
@@ -67,7 +70,7 @@ RUN wget -nv --show-progress --progress=bar:force:noscroll "https://nginx.org/do
 		--with-stream \
 		--with-stream_ssl_module \
 		--with-http_mp4_module \
-		--with-http_geoip_module \
+		--with-http_geoip_module=dynamic \
 		--without-mail_pop3_module \
 		--without-mail_imap_module \
 		--without-mail_smtp_module && \
