@@ -4,7 +4,7 @@
 ARG BASE_IMAGE=ubuntu:26.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG NGINX_VERSION=1.30.1
+ARG NGINX_VERSION=1.30.4
 
 
 # Here is the builder image
