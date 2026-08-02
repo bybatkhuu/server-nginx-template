@@ -1,5 +1,21 @@
 # Changelog
 
+## v3.3.1-260802 (2026-08-02)
+
+<!-- Release notes generated using configuration in .github/release.yml at v3.3.1-260802 -->
+
+## What's Changed
+### 💥 Breaking Changes
+* ⬆️ Bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/bybatkhuu/server-nginx-template/pull/37
+* ⬆️ Bump actions/setup-python from 6 to 7 by @dependabot[bot] in https://github.com/bybatkhuu/server-nginx-template/pull/38
+### 👷 CI/CD
+* Upgrade actions/checkout and actions/setup-python to version 7 by @bybatkhuu in https://github.com/bybatkhuu/server-nginx-template/pull/39
+### 📦 Dependencies
+* Update NGINX version and adjust Docker Compose volume paths by @bybatkhuu in https://github.com/bybatkhuu/server-nginx-template/pull/40
+
+
+**Full Changelog**: https://github.com/bybatkhuu/server-nginx-template/compare/v3.3.0-260518...v3.3.1-260802
+
 ## v3.3.0-260518 (2026-05-18)
 
 <!-- Release notes generated using configuration in .github/release.yml at v3.3.0-260518 -->
