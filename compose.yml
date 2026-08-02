@@ -11,9 +11,9 @@ services:
       - path: .env
         required: false
     volumes:
+      - "./volumes/configs/nginx/templates:/etc/nginx/templates"
+      - "./volumes/configs/nginx/sites-enabled:/etc/nginx/sites-enabled"
       - "./volumes/storage/nginx/logs:/var/log/nginx"
       - "./volumes/storage/nginx/www:/var/www"
-      - "./volumes/storage/nginx/configs/sites-enabled:/etc/nginx/sites-enabled"
-      - "./volumes/storage/nginx/configs/templates:/etc/nginx/templates"
     network_mode: host
     tty: true
