@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       - TERM=${TERM:-xterm}
-      - TZ=${TZ:-Asia/Seoul}
+      - TZ=${TZ:-UTC}
     env_file:
       - path: .env
         required: false
