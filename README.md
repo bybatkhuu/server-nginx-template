@@ -212,6 +212,8 @@ You can use the following environment variables to configure:
 [**`.env.example`**](./.env.example):
 
 ```sh
+# TZ=UTC
+
 ## --- NGINX configs --- ##
 ## NGINX basic auth username and password:
 NGINX_BASIC_AUTH_USER=nginx_admin
