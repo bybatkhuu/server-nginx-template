@@ -1,10 +1,21 @@
 ---
-title: Release Notes
+title: "Release Notes"
 hide:
   - navigation
 ---
 
 # 📌 Release Notes
+
+## v3.3.2-260804 (2026-08-04)
+
+<!-- Release notes generated using configuration in .github/release.yml at v3.3.2-260804 -->
+
+## What's Changed
+### 🔨 Scripts
+* Refactor scripts for improved error handling and argument parsing by @bybatkhuu in https://github.com/bybatkhuu/server-nginx-template/pull/41
+
+
+**Full Changelog**: https://github.com/bybatkhuu/server-nginx-template/compare/v3.3.1-260802...v3.3.2-260804
 
 ## v3.3.1-260802 (2026-08-02)
 
