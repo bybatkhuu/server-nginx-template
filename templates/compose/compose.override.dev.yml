@@ -1,7 +1,7 @@
 services:
   nginx:
     volumes:
-      # - "./volumes/storage/nginx/ssl:/etc/nginx/ssl"
+      # - "./volumes/secrets/nginx/ssl:/etc/nginx/ssl"
       - "./src/configs/nginx.conf:/etc/nginx/nginx.conf"
       - "./scripts/docker/nginx-reload.sh:/usr/local/bin/nginx-reload.sh"
       - "./scripts/docker/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 
@@ -151,7 +151,6 @@ main()
 		"" | -n | --nginx | nginx)
 			_run_nginx;;
 			# shift;;
-
 		-s=* | --https=*)
 			local _https_type="${1#*=}"
 			if [ "${_https_type}" = "self" ]; then
@@ -163,7 +162,6 @@ main()
 				_https_lets
 			fi
 			shift;;
-
 		-b | --bash | bash | /bin/bash)
 			shift
 			if [ -z "${*:-}" ]; then
@@ -181,4 +179,4 @@ main()
 	esac
 }
 
-main "${@:-}"
+main "$@"

@@ -3,7 +3,7 @@ services:
     image: bybatkhuu/nginx:3.3.1-260802
     # volumes:
     #   - "./volumes/configs/nginx/nginx.conf:/etc/nginx/nginx.conf"
-    #   - "./volumes/storage/nginx/ssl:/etc/nginx/ssl"
+    #   - "./volumes/secrets/nginx/ssl:/etc/nginx/ssl"
     # deploy:
     #   replicas: 0
     #   resources:
