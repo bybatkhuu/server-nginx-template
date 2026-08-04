@@ -32,9 +32,9 @@ USAGE: ${0} [options]
 OPTIONS:
     -l, --logs       Remove logs. Default: false
     -d, --data       Remove data. Default: false
-	-b, --backups    Remove backups. Default: false
+    -b, --backups    Remove backups. Default: false
     -a, --all        Enable all mode. Default: false
-	-f, --force      Enable force mode. Default: false
+    -f, --force      Enable force mode. Default: false
     -s, --silent     Enable silent mode. Default: false
     -h, --help       Show this help message.
 
