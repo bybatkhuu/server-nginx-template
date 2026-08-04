@@ -12,7 +12,7 @@
 # -u, --push-images                         Enable pushing built images to Docker Registry.
 # -c, --clean-images                        Enable clearning leftover images.
 # -x, --cross-compile                       Enable cross compiling.
-# -b=BASE_IMAGE, --base-image=BASE_IMAGE    Base image name. Default is "ubuntu:22.04".
+# -b=BASE_IMAGE, --base-image=BASE_IMAGE    Base image name. Default is "ubuntu:26.04".
 # -g=REGISTRY, --registry=REGISTRY          Docker image registry (docker registry and username). Default is "bybatkhuu".
 # -r=REPO, --repo=REPO                      Docker image repository. Default is "nginx".
 # -v=VERSION, --version=VERSION             Docker image version. Default read from "app/__version__.py" file.
@@ -26,7 +26,7 @@
 ./scripts/build.sh -x
 
 # Or:
-./scripts/build.sh -p=arm64 -b=ubuntu:22.04 -n=bybatkhuu -r=nginx -v=1.0.0 -s=-arm64 -u -c
+./scripts/build.sh -p=arm64 -b=ubuntu:26.04 -n=bybatkhuu -r=nginx -v=1.0.0 -s=-arm64 -u -c
 ```
 
 **B.** Or docker build command:
