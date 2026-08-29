@@ -1,6 +1,9 @@
 services:
   nginx:
     image: bybatkhuu/nginx:latest
+    # env_file:
+    #   - path: .env
+    #     required: false
     volumes:
       # - "./volumes/secrets/nginx/ssl:/etc/nginx/ssl"
       - "./src/configs/nginx.conf:/etc/nginx/nginx.conf"
