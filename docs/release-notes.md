@@ -6,6 +6,17 @@ hide:
 
 # 📌 Release Notes
 
+## v3.3.3-260829 (2026-08-29)
+
+<!-- Release notes generated using configuration in .github/release.yml at v3.3.3-260829 -->
+
+## What's Changed
+### 🔨 Scripts
+* Update Nginx image version and adjust compose file paths by @bybatkhuu in https://github.com/bybatkhuu/server-nginx-template/pull/42
+
+
+**Full Changelog**: https://github.com/bybatkhuu/server-nginx-template/compare/v3.3.2-260804...v3.3.3-260829
+
 ## v3.3.2-260804 (2026-08-04)
 
 <!-- Release notes generated using configuration in .github/release.yml at v3.3.2-260804 -->
