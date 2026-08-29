@@ -22,8 +22,7 @@ _run_nginx()
 	echo -e "[OK]: Done.\n"
 
 	echo "[INFO]: Running nginx..."
-	exec nginx || exit 2
-	exit 0
+	exec nginx
 }
 
 
@@ -166,10 +165,10 @@ main()
 			shift
 			if [ -z "${*:-}" ]; then
 				echo "[INFO]: Starting bash..."
-				/bin/bash
+				exec /bin/bash
 			else
 				echo "[INFO]: Executing command -> ${*}"
-				exec /bin/bash -c "${@}" || exit 2
+				exec /bin/bash -c "${*}"
 			fi
 			exit 0;;
 		*)

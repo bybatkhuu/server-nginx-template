@@ -1,15 +1,12 @@
 services:
   nginx:
-    image: bybatkhuu/nginx:latest
+    image: bybatkhuu/nginx:3.3.2-260804
     build:
       context: .
     restart: always
     environment:
       - TERM=${TERM:-xterm}
       - TZ=${TZ:-UTC}
-    env_file:
-      - path: .env
-        required: false
     volumes:
       - "./volumes/configs/nginx/templates:/etc/nginx/templates"
       - "./volumes/configs/nginx/sites-enabled:/etc/nginx/sites-enabled"
