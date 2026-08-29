@@ -5,8 +5,8 @@ services:
       context: .
     restart: always
     environment:
-      - TERM=${TERM:-xterm}
-      - TZ=${TZ:-UTC}
+      TERM: ${TERM:-xterm}
+      TZ: ${TZ:-UTC}
     volumes:
       - "./volumes/configs/nginx/templates:/etc/nginx/templates"
       - "./volumes/configs/nginx/sites-enabled:/etc/nginx/sites-enabled"
