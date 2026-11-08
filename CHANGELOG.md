@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.6.0-261108 (2026-11-08)
+
+<!-- Release notes generated using configuration in .github/release.yml at v3.6.0-261108 -->
+
+## What's Changed
+### ✨ Features
+* chore(deps): bump https://github.com/igorshubovych/markdownlint-cli from v0.49.1 to 0.50.0 by @dependabot[bot] in https://github.com/bybatkhuu/server-nginx-template/pull/45
+* Bump markdownlint-cli to version 0.50.0 and add proxy timeout feature by @bybatkhuu in https://github.com/bybatkhuu/server-nginx-template/pull/46
+
+
+**Full Changelog**: https://github.com/bybatkhuu/server-nginx-template/compare/v3.5.0-261021...v3.6.0-261108
+
 ## v3.5.0-261021 (2026-10-21)
 
 <!-- Release notes generated using configuration in .github/release.yml at v3.5.0-261021 -->
