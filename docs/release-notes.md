@@ -6,6 +6,17 @@ hide:
 
 # 📌 Release Notes
 
+## v3.6.1-261120 (2026-11-20)
+
+<!-- Release notes generated using configuration in .github/release.yml at v3.6.1-261120 -->
+
+## What's Changed
+### 🐛 Fixes
+* fix: update NGINX version to 1.30.7 in Dockerfile by @bybatkhuu in https://github.com/bybatkhuu/server-nginx-template/pull/47
+
+
+**Full Changelog**: https://github.com/bybatkhuu/server-nginx-template/compare/v3.6.0-261108...v3.6.1-261120
+
 ## v3.6.0-261108 (2026-11-08)
 
 <!-- Release notes generated using configuration in .github/release.yml at v3.6.0-261108 -->
