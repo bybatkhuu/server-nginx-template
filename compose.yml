@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: bybatkhuu/nginx:3.6.0-261108
+    image: bybatkhuu/nginx:3.6.1-261120
     build:
       context: .
     restart: always
