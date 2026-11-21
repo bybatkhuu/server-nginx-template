@@ -63,4 +63,4 @@ jobs:
       - name: Trigger release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run 3.create-release.yml
+        run: gh workflow run 3.create-release.yml --repo ${{ github.repository }}
