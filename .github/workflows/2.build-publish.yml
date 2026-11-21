@@ -15,11 +15,10 @@ permissions:
 
 jobs:
   setup:
-    name: Resolve Version and Image
+    name: Resolve Version
     runs-on: ubuntu-26.04
     outputs:
       version: ${{ steps.resolve.outputs.version }}
-      image: ${{ steps.resolve.outputs.image }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -27,11 +26,9 @@ jobs:
         run: |
           git pull origin main
           echo "Current version: v$(./scripts/get-version.sh)"
-      - name: Resolve version and image
+      - name: Resolve version
         id: resolve
-        run: |
-          echo "version=$(./scripts/get-version.sh)" >> "$GITHUB_OUTPUT"
-          echo "image=${{ secrets.DOCKERHUB_USERNAME }}/nginx" >> "$GITHUB_OUTPUT"
+        run: echo "version=$(./scripts/get-version.sh)" >> "$GITHUB_OUTPUT"
 
   build:
     name: Build and Publish
@@ -46,14 +43,14 @@ jobs:
       platforms: linux/amd64,linux/arm64
       cache: true
       cache-mode: max
-      meta-images: ${{ needs.setup.outputs.image }}
+      meta-images: ${{ vars.DOCKERHUB_USERNAME }}/nginx
       meta-tags: |
         type=raw,value=latest
         type=raw,value=${{ needs.setup.outputs.version }}
     secrets:
       registry-auths: |
         - registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
   release:
