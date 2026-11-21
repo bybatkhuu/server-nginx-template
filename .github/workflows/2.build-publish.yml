@@ -35,8 +35,8 @@ jobs:
     needs: setup
     uses: docker/github-builder/.github/workflows/build.yml@v1
     permissions:
-      contents: read # to fetch the repository content
-      id-token: write # for signed attestations and cache entries
+      contents: read
+      id-token: write
     with:
       output: image
       push: true
