@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  setup:
+  resolve:
     name: Resolve Version
     runs-on: ubuntu-26.04
     outputs:
@@ -32,7 +32,7 @@ jobs:
 
   build:
     name: Build and Publish
-    needs: setup
+    needs: resolve
     uses: docker/github-builder/.github/workflows/build.yml@v1
     permissions:
       contents: read
@@ -46,7 +46,7 @@ jobs:
       meta-images: ${{ vars.DOCKERHUB_USERNAME }}/nginx
       meta-tags: |
         type=raw,value=latest
-        type=raw,value=${{ needs.setup.outputs.version }}
+        type=raw,value=${{ needs.resolve.outputs.version }}
     secrets:
       registry-auths: |
         - registry: docker.io
