@@ -51,7 +51,7 @@ jobs:
       registry-auths: |
         - registry: docker.io
           username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: ${{ secrets.DOCKERHUB_TOKEN_WRITE }}
 
   release:
     name: Trigger Release
